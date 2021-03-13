@@ -1,5 +1,6 @@
-Feature:I`m demonstrating how I work with Modals and Popups
-  Background:
+Feature: This is a demonstration of my work with modals and pop-ups
+
+  Background: I navigate to Modals and Popups page
     Given GUIElements ModalsPopups. I navigate to Modals and Popups
     Then GUIElements ModalsPopups. Verify that I`m on Modals and Popups page
 

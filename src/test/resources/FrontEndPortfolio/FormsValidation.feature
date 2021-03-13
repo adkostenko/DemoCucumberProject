@@ -1,5 +1,6 @@
-Feature:
-Background:
+Feature: This is a demonstration of my work with Validation Forms and error messages
+
+Background: I navigate to Validation page
   Given FormsValidation. Navigate to validation page
 
   Scenario Outline: check validation notifications

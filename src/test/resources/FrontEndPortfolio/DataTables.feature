@@ -1,5 +1,6 @@
-Feature: Test Automation for Forms
-  Background:
+Feature: This is a demonstration of my work with Data Tables
+
+  Background: I navigate to Data Tables page
     Given DataTables. Navigate to data tables
     Then DataTables. I check if I'm on the tables page
 
@@ -21,3 +22,4 @@ Feature: Test Automation for Forms
 
   Scenario: read search queries from the file
     And DataTables. Check if data in webapp is matching the test data in the file
+#not working^^

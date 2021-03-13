@@ -1,6 +1,6 @@
-Feature: I`m demonstrating how I work with buttons
-Background:
+Feature:  This is a demonstration of my work with buttons
 
+  Background: I navigate to Buttons page
   Given GUIElements Buttons. I navigate to Buttons
   Then GUIElements Buttons. Verify that I`m on the Buttons page
 

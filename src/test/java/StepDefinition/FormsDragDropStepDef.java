@@ -14,8 +14,9 @@ public class FormsDragDropStepDef extends CommonPage {
         dragDrop.navigateToDragDrop();
     }
 
-    @And("FormsDragDrop.Drag and drop from OS")
-    public void DragAndDropFromOS() {
+    @And("FormsDragDrop. Upload file from OS")
+    public void uploadFileFromOS() {
+        dragDrop.uploadFileFromOS();
 
     }
 }

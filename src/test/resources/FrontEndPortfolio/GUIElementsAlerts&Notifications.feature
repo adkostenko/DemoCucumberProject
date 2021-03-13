@@ -1,5 +1,6 @@
-Feature: I'm demonstrating ow I'm working with WebElements
-  Background: Navigate to the Alerts & Notification page
+Feature:  This is a demonstration of my work with Alerts and Notifications pop-ups
+
+  Background: I navigate to the Alerts & Notification page
     Given GUIElements Alerts&Notif. I navigate to alerts and notifications
     Then GUIElements Alerts&Notif. Verify that I`m on the correct Page
 

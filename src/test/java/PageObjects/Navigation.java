@@ -11,7 +11,7 @@ public class Navigation extends CommonPage {
         getClickableElement( By.cssSelector( "[title='Alerts & Notifications']" ) ).click();
     }
 
-    protected void pressOnUIElementsMenuItem() {
+    public void pressOnUIElementsMenuItem() {
         getClickableElement( By.cssSelector( "[title='UI Elements']" ) ).click();
     }
 
@@ -64,6 +64,12 @@ public class Navigation extends CommonPage {
     public void pressOnDataTablesItem() {
         pressOnTablesItem();
         getClickableElement( By.cssSelector( "[title='Data Tables']" ) ).click();
+    }
+
+
+    public void pressOnBasicTablesItem() {
+        pressOnTablesItem();
+        getClickableElement( By.cssSelector( "a[title='Basic']" ) ).click();
     }
 }
 

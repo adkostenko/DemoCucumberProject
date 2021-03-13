@@ -1,5 +1,6 @@
-Feature:
-  Background:
+Feature: This is a demonstration of my work with fields and check boxes
+
+  Background: I navigate to Forms Components page
     Given FormsComponents. Navigate to Forms Components
 
   Scenario: Fill out basic form

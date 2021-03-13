@@ -1,5 +1,6 @@
-Feature:
-Background:
+Feature: This is a demonstration of my work with Masks
+
+Background: I navigate to Masks page
   Given FormsMasks. Navigate to masks
 
   Scenario: Fill out Date field in Form Mask

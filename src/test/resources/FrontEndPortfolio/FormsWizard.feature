@@ -1,7 +1,9 @@
-Feature:
+Feature: This is a demonstration of my work with multi-step forms
+
+  Background: I navigate to Wizard page
+    Given FormsWizard. Navigate to Wizard page
 
   Scenario Outline: Fill Out Wizard Form
-    Given FormsWizard. Navigate to Wizard page
     And FormsWizard. Fill out the first page with: "<First Name>" and "<Last Name>"
     And FormsWizard. Press Next Button
     And FormsWizard. Fillout the second Page with: "<Street Address>", "<City>", "<State>", "<Zip>"

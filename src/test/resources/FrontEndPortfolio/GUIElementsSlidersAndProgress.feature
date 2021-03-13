@@ -1,6 +1,6 @@
-Feature: I`m demonstrating how I work with Sliders and Progress
+Feature:  This is a demonstration of my work with Sliders and Progress
 
-  Background:
+  Background: I navigate to Sliders and Progress page
     Given GUIElements SlidersAndProgress. Navigate to Sliders and Progress
 
 
