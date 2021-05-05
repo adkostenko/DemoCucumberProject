@@ -83,8 +83,6 @@ public class ModalsAndPopups extends CommonPage {
     public void holdMouseOverTooltipOnTopAndReadTheMessage() {
         By locator = By.cssSelector( "button[tooltip-placement='top']" );
         action.moveToElement(getElement(locator)).perform();
-//        By text = By.xpath(  )
-//        Assert.assertEquals(  );
     }
 
     public String  getTooltipOnTop() {

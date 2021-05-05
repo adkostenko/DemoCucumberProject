@@ -7,6 +7,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
+import java.util.List;
+import java.util.Map;
+
 public class BasicTablesStepDef extends CommonPage {
     BasicTables basicTables = new BasicTables();
 
@@ -15,8 +18,8 @@ public class BasicTablesStepDef extends CommonPage {
         basicTables.navigateToBasicTables();
     }
 
-    @And("BasicTables. Check if the data in the Table as expected")
-    public void checkIfTheDataInTheTableAsExpected( DataTable tables ) {
-        Assert.assertEquals(basicTables.checkTheDataInTheTable(), tables.asList());
+    @And("BasicTables. Verify content of the table")
+    public void verifyContentOfTheTable( DataTable dataTable) {
+        basicTables.verifyContentOfTheTable();
     }
 }

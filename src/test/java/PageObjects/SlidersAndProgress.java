@@ -118,24 +118,10 @@ public class SlidersAndProgress extends CommonPage{
         String argumentsValue = elementSlider.getAttribute("style");
 
         String initValue = StringUtils.substringBefore(argumentsValue.substring(argumentsValue.indexOf("width: ") + 6), "%;");
-        /*
-        if init value is more than target value -> this is what we got at the start.
-        If init value id equal to target -> nothing supposed to be done
-        If init value is less than target -> we should decrease , not increase the value which we sending to arguments
-        if init value doesn't match starting value -> we should adjust it. and make this adjustment smooth. as usual.
-         */
+
         double dArg0 = Double.parseDouble(arg0);
         double dArg1 = Double.parseDouble(arg1);
         double step = 10;
-//        for (double i=dArg0; i<dArg1 ; i=i+step){
-//            dArg0 = dArg0 + step;
-//            js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementSlider);
-//            js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementHandle);
-//            System.out.println(dArg0);
-//        }
-        /**
-         * if we need to decrease the value this is the loop for that
-         */
         for(double i=dArg0; i>dArg1 ; i=i-step){
             dArg0 = dArg0 - step;
             js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementSlider);
@@ -172,26 +158,11 @@ public class SlidersAndProgress extends CommonPage{
         String argumentsValue1 = elementTopSlider.getAttribute("style");
 
         String initValue = StringUtils.substringBefore(argumentsValue.substring(argumentsValue.indexOf("width: ") + 6), "%;");
-        /*
-        if init value is more than target value -> this is what we got at the start.
-        If init value id equal to target -> nothing supposed to be done
-        If init value is less than target -> we should decrease , not increase the value which we sending to arguments
-        if init value doesn't match starting value -> we should adjust it. and make this adjustment smooth. as usual.
-         */
         double dArg0 = Double.parseDouble(arg0);
         double dArg1 = Double.parseDouble(arg1);
         double dArg2 = Double.parseDouble(arg2);
         double dArg3 = Double.parseDouble(arg3);
         double step = 5;
-//        for (double i=dArg0; i<dArg1 ; i=i+step){
-//            dArg0 = dArg0 + step;
-//            js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementSlider);
-//            js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementHandle);
-//            System.out.println(dArg0);
-//        }
-        /**
-         * if we need to decrease the value this is the loop for that
-         */
         for(double i=dArg0; i>dArg1 ; i=i-step) {
             dArg0 = dArg0 - step;
             js.executeScript( "arguments[0].setAttribute('style', 'width: " + dArg0 + "%')", elementBottomSlider );

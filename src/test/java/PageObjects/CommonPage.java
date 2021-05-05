@@ -40,9 +40,6 @@ public class CommonPage {
                 .ignoring(NoSuchElementException.class);
     }
 
-    /**
-     * Important, KEEP IT. USE IT
-     */
     public void waitForPageLoad() {
         Wait<WebDriver> wait = new WebDriverWait(driver, 30);
         wait.until(driver -> {
@@ -64,7 +61,7 @@ public class CommonPage {
 
     public void sendKeysRedefined(WebElement element, String value, int delay) {
         try {
-            Thread.sleep(delay * 1000);
+            Thread.sleep(delay * 10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -90,17 +87,16 @@ public class CommonPage {
     public void waitFor(String arg0) {
         System.out.println(arg0);
         try {
-            Thread.sleep(Integer.parseInt(arg0) * 1000);
+            Thread.sleep(Integer.parseInt(arg0) * 100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
     public void testImages() {
-        // Storing all elements with img tag in a list of WebElements
+
         List<WebElement> images = driver.findElements(By.tagName("img"));
         System.out.println("Total number of Images on the Page are " + images.size());
 
-        //checking the links fetched.
         for(int index=0;index<images.size();index++)
         {
             WebElement image= images.get(index);
@@ -147,7 +143,6 @@ public class CommonPage {
     }
     public void getScreenShot() {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        //The below method will save the screen shot in destination directory with name "screenshot.png"
         try {
             FileHandler.copy(scrFile, new File("src/test/screenshots/test.png"));
         } catch (IOException e) {
