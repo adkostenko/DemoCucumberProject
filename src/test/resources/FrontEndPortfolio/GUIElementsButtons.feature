@@ -15,7 +15,6 @@ Feature:  This is a demonstration of my work with buttons
 
   Scenario: Press on DropUp
     Then GUIElements Buttons. Find Button Dropdowns menu
-    And GUIElements Buttons. Click on a button from Dropup variation
-    # I need help with this step ^. Locator is not correct
+    And GUIElements Buttons. Click on a button from DropUp variation
     And GUIElements Buttons. Select "Another Action" from the dropdUp menu
 

@@ -15,7 +15,7 @@ public class ModalsAndPopups extends CommonPage {
     }
 
     public void verifyThatIMOnModalsAndPopupsPage() {
-        By locator = By.cssSelector("div[class='col-md-12'] h3[class='panel-title']");
+        By locator = By.xpath("//h3[normalize-space()='Modals']");
         Assert.assertEquals(getElement( locator ).getText(),"MODALS");
     }
 

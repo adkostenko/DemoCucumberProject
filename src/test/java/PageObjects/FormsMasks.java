@@ -30,7 +30,7 @@ public class FormsMasks extends CommonPage{
 
     public String getPhoneNumber() {
         By locator = By.xpath( "/html[1]/body[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/div[1]/input[1]" );
-        return getElement( locator ).getAttribute( "arg0" );
+        return getElement( locator ).getAttribute( "value" );
     }
 }
 

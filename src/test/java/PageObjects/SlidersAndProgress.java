@@ -15,6 +15,12 @@ public class SlidersAndProgress extends CommonPage{
 
 
     public void moveGreyHorizontalSlider(String arg0, String arg1) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String init = "8.55";
 
         By locator = By.xpath( "//body//section[@id='main-wrapper']//div[@class='row']//div[@class='row']//div[@class='row']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]" );
         By handle = By.xpath( "//body//section[@id='main-wrapper']//div[@class='row']//div[@class='row']//div[@class='row']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//div[2]" );
@@ -23,25 +29,26 @@ public class SlidersAndProgress extends CommonPage{
         WebElement elementHandle = getClickableElement( handle );
         String initialPercent = elementSlider.getAttribute( "style" );
         System.out.println( "initialPercent:" + initialPercent );
-
+        double dInit = Double.parseDouble(init);
         double dArg0 = Double.parseDouble(arg0);
         double dArg1 = Double.parseDouble(arg1);
         double step = 0.5;
 
-        for (double i=dArg0; i<dArg1 ; i= i + step){
+        for (double i=dInit; i<dArg1 ; i= i + step){
             dArg0 = dArg0 + step;
             js.executeScript("arguments[0].setAttribute('style', 'width: " + dArg0 + "%')", elementSlider);
+            js.executeScript("arguments[0].setAttribute('style', 'width: " + dArg0 + "%')", elementHandle);
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            js.executeScript("arguments[0].setAttribute('style', 'width: " + dArg0 + "%')", elementHandle);
             System.out.println(dArg0);
         }
     }
 
     public void moveRedHorizontalSlider( String arg0, String arg1 ) {
+
 
         By locator = By.xpath( "//body//section[@id='main-wrapper']//div[@class='row']//div[@class='row']//div[@class='row']//div[1]//div[5]//div[1]//div[1]//div[1]//div[1]//div[1]" );
         By handle = By.xpath( "//body//section[@id='main-wrapper']//div[@class='row']//div[@class='row']//div[@class='row']//div[1]//div[5]//div[1]//div[1]//div[1]//div[1]//div[2]" );
@@ -118,7 +125,6 @@ public class SlidersAndProgress extends CommonPage{
         String argumentsValue = elementSlider.getAttribute("style");
 
         String initValue = StringUtils.substringBefore(argumentsValue.substring(argumentsValue.indexOf("width: ") + 6), "%;");
-
         double dArg0 = Double.parseDouble(arg0);
         double dArg1 = Double.parseDouble(arg1);
         double step = 10;
@@ -157,12 +163,14 @@ public class SlidersAndProgress extends CommonPage{
         String argumentsValue = elementBottomSlider.getAttribute("style");
         String argumentsValue1 = elementTopSlider.getAttribute("style");
 
-        String initValue = StringUtils.substringBefore(argumentsValue.substring(argumentsValue.indexOf("width: ") + 6), "%;");
+        String initValue = StringUtils.substringBefore(argumentsValue.substring(argumentsValue.indexOf("width: ") + 5), "%;");
+
         double dArg0 = Double.parseDouble(arg0);
         double dArg1 = Double.parseDouble(arg1);
         double dArg2 = Double.parseDouble(arg2);
         double dArg3 = Double.parseDouble(arg3);
         double step = 5;
+
         for(double i=dArg0; i>dArg1 ; i=i-step) {
             dArg0 = dArg0 - step;
             js.executeScript( "arguments[0].setAttribute('style', 'width: " + dArg0 + "%')", elementBottomSlider );

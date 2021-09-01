@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.logging.Level;
 
 public class MyDriver {
-    public static WebDriver MyDriver() {
+    public static WebDriver myDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
@@ -25,7 +25,6 @@ public class MyDriver {
 
     public WebDriver remoteDriver() {
         RemoteWebDriver webDriver = null;
-
         ChromeOptions options = new ChromeOptions();
         try {
             webDriver = new RemoteWebDriver(new URL( "http://10.0.2.15:4444/wd/hub"), options );
@@ -33,6 +32,5 @@ public class MyDriver {
             e.printStackTrace();
         }
         return webDriver;
-
     }
 }

@@ -30,5 +30,3 @@ Feature: This is a demonstration of my work with modals and pop-ups
     And GUIElements ModalsPopups. Hold mouse over Tooltip on Top
     And GUIElements ModalsPopups. Read the Tooltip on Top message
 
-#need to add assertion. but i don`t know how to do that^^
-  #Also, need to ask why It runs every test seperatly, but not all together. It does not reopen a browser again

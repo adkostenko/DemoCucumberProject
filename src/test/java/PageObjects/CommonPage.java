@@ -5,7 +5,6 @@ import Utils.TestURLs;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -21,7 +20,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Function;
 
 public class CommonPage {
     static WebDriver driver;
@@ -32,7 +30,7 @@ public class CommonPage {
 
     public CommonPage() {
         if (driver == null) {
-            driver = MyDriver.MyDriver();
+            driver = MyDriver.myDriver();
         }
         wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
@@ -61,7 +59,7 @@ public class CommonPage {
 
     public void sendKeysRedefined(WebElement element, String value, int delay) {
         try {
-            Thread.sleep(delay * 10);
+            Thread.sleep(delay * 5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -87,7 +85,7 @@ public class CommonPage {
     public void waitFor(String arg0) {
         System.out.println(arg0);
         try {
-            Thread.sleep(Integer.parseInt(arg0) * 100);
+            Thread.sleep(Integer.parseInt(arg0) * 5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -138,7 +136,9 @@ public class CommonPage {
             else{
                 System.out.println("HTTP STATUS - " + httpURLConnect.getResponseMessage());
             }
-        }catch (Exception e) {
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
     public void getScreenShot() {

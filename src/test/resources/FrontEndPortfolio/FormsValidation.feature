@@ -11,9 +11,5 @@ Background: I navigate to Validation page
     And FormsValidation. Read a notification message "<NotificationForName>", "<NotificationForUsername>", "<NotificationForEmail>"
 
     Examples:
-    |Name  |Username  | Email         | NotificationForName | NotificationForUsername   | NotificationForEmail|
-    | fg   |gh        |al             |You name is required.|   Username is too short.  | Enter a valid email.|
-    | al   | alonakost| alona@test.com|You name is required.|   Username is too long.   |                     |
-    |      | dfdf     | Email@g.cf    |                     |                           |                     |
-
-# Ask about the second loop
+    |Name  |Username  | Email         | NotificationForName |  NotificationForUsername | NotificationForEmail|
+    | fg   |gh        |al             |You name is required.|  Username is too short.  | Enter a valid email.|

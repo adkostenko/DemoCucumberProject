@@ -5,7 +5,8 @@ public class Images extends CommonPage{
         testImages();
     }
 
-    public void navigate(String arg0) {
-        navigate(arg0);
+    public void navigateToDemoqa( String arg0 ) {
+        driver.navigate().to(arg0);
+        waitForPageLoad();
     }
 }

@@ -6,7 +6,8 @@ public class Cookies extends CommonPage{
     public void getSomeCookies(){
         getCookies();
     }
-     public void navigate(String arg0){
-        navigate(arg0);
+     public void navigateToCNN(String arg0){
+         driver.navigate().to(arg0);
+         waitForPageLoad();
      }
 }

@@ -22,4 +22,3 @@ Feature: This is a demonstration of my work with Data Tables
 
   Scenario: read search queries from the file
     And DataTables. Check if data in webapp is matching the test data in the file
-#not working^^

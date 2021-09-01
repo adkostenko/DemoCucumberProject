@@ -34,7 +34,7 @@ public class Tables extends CommonPage{
         for (int i = 0; i < getElements(locator).size(); i++) {
             actualData.add(getElements(locator).get(i).getText());
         }
-        List testData = Arrays.asList(headerContents);
+        List<String> testData = Arrays.asList(headerContents);
         Assert.assertEquals(actualData, testData);
     }
 
@@ -80,9 +80,6 @@ public class Tables extends CommonPage{
     }
 
     public void printTheTable() {
-        /**
-         * This method will set the amount of the elements on teh table to the given number
-         */
         pickPaginationOptions("100");
         By tableLocator = By.cssSelector("[id='example'] >tbody >tr");
         waitForPageLoad();

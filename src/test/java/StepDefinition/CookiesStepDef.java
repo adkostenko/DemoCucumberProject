@@ -12,7 +12,7 @@ public class CookiesStepDef {
 
     @Given("Cookies. I navigate to :{string}")
     public void cookiesINavigateTo(String arg0) {
-        cookies.navigate(arg0);
+        cookies.navigateToCNN(arg0);
     }
 
 

@@ -58,7 +58,7 @@ public class Navigation extends CommonPage {
     }
 
     public void pressOnTablesItem(){
-        getClickableElement( By.cssSelector( "[title='Tables']" ) ).click();
+        getClickableElement( By.cssSelector( "a[title='Tables']" ) ).click();
     }
 
     public void pressOnDataTablesItem() {

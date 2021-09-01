@@ -59,7 +59,7 @@ public class TablesStepDef extends CommonPage {
 
     @And("DataTables. Check if data in webapp is matching the test data in the file")
     public void datatablesCheckIfDataInWebappIsMatchingTheTestDataInTheFile() {
-        //tables.printTheTable();
+        dataTables.printTheTable();
         List<String> testData = dataTables.readTestData();
         Assert.assertEquals(dataTables.getTestData(), testData, "Actual data doesn't match the test data");
     }

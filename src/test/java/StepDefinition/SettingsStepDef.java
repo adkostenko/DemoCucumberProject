@@ -32,8 +32,5 @@ public class SettingsStepDef extends CommonPage {
         }
     }
 
-    @And("Settings. Check if the Header changed to grey color")
-    public void settingsCheckIfTheHeaderChangedToGreyColor() {
-        settings.checkHeaderColor();
-    }
+
 }

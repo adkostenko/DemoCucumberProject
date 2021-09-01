@@ -40,7 +40,7 @@ public class GUIElementsButtonsStepdef  {
     }
 
 
-    @And("GUIElements Buttons. Click on a button from Dropup variation")
+    @And("GUIElements Buttons. Click on a button from DropUp variation")
     public void clickOnAButtonFromDropupVariation() {
         buttons.clickOnAButtonFromDropupVariation();
     }

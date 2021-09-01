@@ -31,7 +31,8 @@ public class FormsMasksStepDef {
     }
 
     @And("FormsMasks. Verified the phone number is as entered: {string}")
-    public void VerifiedThePhoneNumberIsAsEntered( String arg0 ) {
-        Assert.assertEquals( masks.getPhoneNumber(), arg0 );
+    public void VerifiedThePhoneNumberIsAsEntered( String value ) {
+        Assert.assertEquals( masks.getPhoneNumber(), value );
     }
+
 }

@@ -33,7 +33,7 @@ public class FormsValidation extends CommonPage{
         By locator2 = By.cssSelector( "p[ng-show='userForm.username.$error.minlength']" );
         By locator3 = By.cssSelector( "p[ng-show='userForm.email.$invalid && !userForm.email.$pristine']" );
 
-        if(!arg0.equals("") ){            //! before something means "not". in this case it`s not equals
+        if(!arg0.equals("") ){
           Assert.assertEquals( getClickableElement( locator1 ).getText(), arg0);
           Assert.assertEquals( getClickableElement( locator2 ).getText(), arg1);
           Assert.assertEquals( getClickableElement( locator3 ).getText(), arg2);

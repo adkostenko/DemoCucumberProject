@@ -5,4 +5,3 @@ Feature: This is a demonstration of my work with uploading files from OS
 
   Scenario: Drag and Drop files
     And FormsDragDrop. Upload file from OS
-    #Not working for me

@@ -13,7 +13,8 @@ Feature: This is a demonstration of my work with multi-step forms
     And FormsWizard. Accept the alert
     And FormsWizard. Check data on last step: "<First Name>", "<Last Name>", "<Street Address>", "<City>","<State>", "<Zip>"
     Examples:
-      |First Name  | Last Name | Street Address| City|State|Zip  |
-      |First Name  | Last Name | Street Address| City|State|Zip  |
-      |Tom         | Ford      | 28374 West st | NYC | NY  |10928|
+      |First Name  | Last Name | Street Address| City|State|Zip   |
+      |First Name  | Last Name | Street Address| City|State|Zip   |
+      |Tom         | Ford      | 28374 West st | NYC | NY  |10928 |
+      | Alona      | Kostenko  | 1123 Omega Dr | Mid | CA  | 91332|
 
